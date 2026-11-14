@@ -1,77 +1,96 @@
 
-/* =====================================
-   JESSEWEB STUDIO - JAVASCRIPT
-===================================== */
+document.addEventListener("DOMContentLoaded", function () {
 
-// MOBILE NAVIGATION
+    // CURRENT YEAR
+    const year = document.getElementById("year");
 
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
 
-if (menuBtn && navLinks) {
+    // MOBILE NAVIGATION
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
 
-    menuBtn.addEventListener("click", () => {
+    if (menuToggle && mainNav) {
 
-        const opened = navLinks.classList.toggle("open");
+        menuToggle.addEventListener("click", function () {
 
-        menuBtn.textContent = opened ? "✕" : "☰";
+            const isOpen = mainNav.classList.toggle("show");
 
-        menuBtn.setAttribute("aria-expanded", opened);
+            menuToggle.textContent = isOpen ? "✕" : "☰";
 
-    });
-
-    document.querySelectorAll(".nav-links a").forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            navLinks.classList.remove("open");
-
-            menuBtn.textContent = "☰";
-
-            menuBtn.setAttribute("aria-expanded", "false");
-
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
         });
 
-    });
+        mainNav.querySelectorAll("a").forEach(function (link) {
 
-}
+            link.addEventListener("click", function () {
 
+                mainNav.classList.remove("show");
 
-// DARK AND LIGHT MODE
+                menuToggle.textContent = "☰";
 
-const themeBtn = document.getElementById("themeBtn");
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
-if (themeBtn) {
+            });
 
-    themeBtn.addEventListener("click", () => {
+        });
+    }
 
-        document.body.classList.toggle("light");
+    // DARK AND LIGHT MODE
+    const themeToggle = document.getElementById("themeToggle");
 
-        const isLight =
-            document.body.classList.contains("light");
+    const savedTheme = localStorage.getItem("jesseweb-theme");
 
-        themeBtn.textContent = isLight ? "☾" : "☀";
+    if (savedTheme === "light") {
+        document.body.classList.add("light-mode");
+    }
 
-        themeBtn.setAttribute(
-            "aria-label",
-            isLight ? "Switch to dark mode" : "Switch to light mode"
-        );
+    function updateThemeIcon() {
 
-    });
+        if (!themeToggle) return;
 
-}
+        themeToggle.textContent =
+            document.body.classList.contains("light-mode")
+                ? "☾"
+                : "☼";
+    }
 
+    updateThemeIcon();
 
-// SCROLL REVEAL ANIMATIONS
+    if (themeToggle) {
 
-const revealElements = document.querySelectorAll(".reveal");
+        themeToggle.addEventListener("click", function () {
 
-if ("IntersectionObserver" in window) {
+            document.body.classList.toggle("light-mode");
 
-    const revealObserver = new IntersectionObserver(
-        (entries, observer) => {
+            const theme =
+                document.body.classList.contains("light-mode")
+                    ? "light"
+                    : "dark";
 
-            entries.forEach(entry => {
+            localStorage.setItem("jesseweb-theme", theme);
+
+            updateThemeIcon();
+
+        });
+    }
+
+    // SCROLL REVEAL ANIMATIONS
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+
+        const observer = new IntersectionObserver(function (entries) {
+
+            entries.forEach(function (entry) {
 
                 if (entry.isIntersecting) {
 
@@ -83,126 +102,20 @@ if ("IntersectionObserver" in window) {
 
             });
 
-        },
-        {
+        }, {
             threshold: 0.12
-        }
-    );
-
-    revealElements.forEach(element => {
-
-        revealObserver.observe(element);
-
-    });
-
-} else {
-
-    revealElements.forEach(element => {
-
-        element.classList.add("visible");
-
-    });
-
-}
-
-
-// FAQ ACCORDION
-
-const faqButtons = document.querySelectorAll(".faq-question");
-
-faqButtons.forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        const currentItem = button.parentElement;
-
-        const wasOpen = currentItem.classList.contains("open");
-
-        document.querySelectorAll(".faq-item").forEach(item => {
-
-            item.classList.remove("open");
-
         });
 
-        if (!wasOpen) {
+        revealElements.forEach(function (element) {
+            observer.observe(element);
+        });
 
-            currentItem.classList.add("open");
+    } else {
 
-        }
+        revealElements.forEach(function (element) {
+            element.classList.add("visible");
+        });
 
-    });
+    }
 
 });
-
-
-// WHATSAPP CONTACT FORM
-
-const contactForm = document.getElementById("contactForm");
-
-if (contactForm) {
-
-    contactForm.addEventListener("submit", event => {
-
-        event.preventDefault();
-
-        if (!contactForm.reportValidity()) {
-
-            return;
-
-        }
-
-        const name =
-            document.getElementById("name").value.trim();
-
-        const email =
-            document.getElementById("clientEmail").value.trim();
-
-        const service =
-            document.getElementById("service").value;
-
-        const message =
-            document.getElementById("message").value.trim();
-
-        const whatsappMessage = `
-Hello JesseWeb Studio!
-
-I would like to enquire about your services.
-
-Name: ${name}
-
-Email: ${email}
-
-Service: ${service}
-
-Project Details:
-${message}
-
-I look forward to hearing from you.
-        `.trim();
-
-        const whatsappURL =
-            "https://wa.me/2347034457988?text=" +
-            encodeURIComponent(whatsappMessage);
-
-        window.open(
-            whatsappURL,
-            "_blank",
-            "noopener,noreferrer"
-        );
-
-    });
-
-}
-
-
-// AUTOMATIC COPYRIGHT YEAR
-
-const yearElement = document.getElementById("year");
-
-if (yearElement) {
-
-    yearElement.textContent = new Date().getFullYear();
-
-}
-
-console.log("JesseWeb Studio JavaScript loaded successfully!");
