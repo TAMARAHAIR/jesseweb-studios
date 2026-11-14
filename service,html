@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | JesseWeb Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">✦ CREATIVE SOLUTIONS FOR BRANDS THAT WANT TO STAND OUT ✦</div>
+
+  <header class="header">
+    <a href="index.html" class="logo">JESSE<span>WEB</span><small>CREATIVE DIGITAL STUDIO</small></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+    <nav id="mainNav">
+      <a href="index.html">Home</a><a href="about.html">About</a>
+      <a href="services.html" class="active">Services</a><a href="portfolio.html">Portfolio</a>
+      <a href="pricing.html">Pricing</a><a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav-button">Hire Us ↗</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle" aria-label="Change colour theme">☼</button>
+  </header>
+
+  <main>
+    <section class="page-hero reveal">
+      <span class="eyebrow">WHAT WE DO</span>
+      <h1>Digital services built to <span class="gold-text">move your brand forward.</span></h1>
+      <p>From the first design concept to the finished website, we help businesses create a strong and memorable online presence.</p>
+      <a href="contact.html" class="btn gold-btn">Discuss your project ↗</a>
+    </section>
+
+    <section class="section">
+      <div class="section-heading reveal"><span class="eyebrow">OUR EXPERTISE</span><h2>What we can <span class="gold-text">create for you.</span></h2></div>
+      <div class="service-grid">
+        <article class="service-card reveal"><span class="card-number">01 / DESIGN</span><h3>Website Design</h3><p>Modern layouts, thoughtful typography, colour systems and beautiful visual experiences that represent your brand.</p><ul><li>Custom page layouts</li><li>Brand-focused styling</li><li>Mobile-friendly design</li><li>User-friendly navigation</li></ul></article>
+        <article class="service-card reveal"><span class="card-number">02 / DEVELOPMENT</span><h3>Website Development</h3><p>Functional websites built with HTML, CSS and JavaScript, designed to work across modern devices and browsers.</p><ul><li>Responsive development</li><li>Interactive features</li><li>Navigation and page linking</li><li>Website deployment support</li></ul></article>
+        <article class="service-card reveal"><span class="card-number">03 / BUSINESS</span><h3>Business Websites</h3><p>Professional websites that introduce your business, explain your services and make it easy for customers to contact you.</p><ul><li>Business homepage</li><li>About and service pages</li><li>Contact information</li><li>WhatsApp integration</li></ul></article>
+        <article class="service-card reveal"><span class="card-number">04 / LANDING PAGES</span><h3>Landing Pages</h3><p>Focused pages created to introduce a product, promote an offer or encourage visitors to take a specific action.</p><ul><li>Campaign-focused layout</li><li>Clear calls to action</li><li>Product or service sections</li><li>Enquiry links</li></ul></article>
+        <article class="service-card reveal"><span class="card-number">05 / REVAMP</span><h3>Website Revamp</h3><p>Give an existing website a fresh look with improved structure, updated styling and a better user experience.</p><ul><li>Visual redesign</li><li>Layout improvements</li><li>Content organisation</li><li>Responsive adjustments</li></ul></article>
+        <article class="service-card reveal"><span class="card-number">06 / SUPPORT</span><h3>Website Updates</h3><p>Keep your website current with content changes, image updates and small improvements as your business grows.</p><ul><li>Text and image updates</li><li>New sections</li><li>Link corrections</li><li>Basic maintenance support</li></ul></article>
+      </div>
+    </section>
+
+    <section class="section process-section">
+      <div class="section-heading reveal"><span class="eyebrow">HOW IT WORKS</span><h2>From idea to <span class="gold-text">launch.</span></h2></div>
+      <div class="process-grid">
+        <article class="process-card reveal"><span>01</span><h3>Discovery</h3><p>Tell us about your business, goals, audience and ideas.</p></article>
+        <article class="process-card reveal"><span>02</span><h3>Planning</h3><p>We agree on the pages, features, design direction and scope.</p></article>
+        <article class="process-card reveal"><span>03</span><h3>Creation</h3><p>We design and develop your website, then review its functionality.</p></article>
+        <article class="process-card reveal"><span>04</span><h3>Launch</h3><p>We prepare the website for publishing and handover.</p></article>
+      </div>
+    </section>
+
+    <section class="section about-cta reveal">
+      <span class="eyebrow">READY TO BEGIN?</span><h2>Your idea deserves a <span class="gold-text">great website.</span></h2>
+      <p>Tell us what you need and let's discuss the best solution.</p>
+      <a href="contact.html" class="btn gold-btn">Get a project quote ↗</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid section">
+      <div><a href="index.html" class="logo">JESSE<span>WEB</span><small>CREATIVE DIGITAL STUDIO</small></a><p>Creative websites for ambitious brands.</p></div>
+      <div><h3>Explore</h3><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="pricing.html">Pricing</a></div>
+      <div><h3>Contact</h3><a href="mailto:tamaranwaokolobia@gmail.com">Email us</a><a href="https://instagram.com/hangout-withjesse" target="_blank" rel="noopener">Instagram</a><a href="https://wa.me/2347034457988" target="_blank" rel="noopener">WhatsApp</a></div>
+    </div>
+    <div class="footer-bottom">© <span id="year"></span> JesseWeb Studio. All rights reserved.</div>
+  </footer>
+  <a class="whatsapp-button" href="https://wa.me/2347034457988?text=Hello%20JesseWeb%20Studio" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">☎</a>
+</body>
+</html>
