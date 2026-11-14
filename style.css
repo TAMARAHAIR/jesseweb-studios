@@ -929,3 +929,510 @@ body.light-mode {
         transform: none;
     }
 }
+
+
+/* =========================================
+   JESSEWEB STUDIO - ADDITIONAL PAGE STYLES
+========================================= */
+
+.gold-text {
+  color: #d6ad55;
+}
+
+.page-hero {
+  padding: 110px 8% 95px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(214,173,85,.15), transparent 60%),
+    var(--background, #090909);
+}
+
+.page-hero h1 {
+  max-width: 950px;
+  margin: 20px auto;
+  font-size: clamp(2.5rem, 6vw, 5.3rem);
+  line-height: 1.08;
+}
+
+.page-hero p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.9;
+  opacity: .8;
+}
+
+.about-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 55px;
+}
+
+.about-story-grid h2,
+.contact-info h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.15;
+}
+
+.about-story-grid p,
+.contact-info > p {
+  line-height: 1.9;
+  opacity: .8;
+}
+
+.about-highlight {
+  min-height: 360px;
+  padding: 35px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(214,173,85,.45);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(214,173,85,.22), transparent 45%),
+    linear-gradient(135deg, #191919, #080808);
+}
+
+.about-highlight-inner h3 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.35;
+}
+
+.about-highlight-inner p {
+  color: #ddd;
+}
+
+.value-grid,
+.extra-price-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.value-grid .service-card,
+.extra-price-grid .service-card {
+  padding: 28px;
+}
+
+.card-number {
+  display: block;
+  color: #d6ad55;
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.about-cta,
+.pricing-note {
+  text-align: center;
+  padding: 65px 30px;
+  border: 1px solid rgba(214,173,85,.3);
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(214,173,85,.10), rgba(214,173,85,.02));
+}
+
+.about-cta h2,
+.pricing-note h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.about-cta p,
+.pricing-note p {
+  max-width: 680px;
+  margin: 15px auto 25px;
+  line-height: 1.8;
+  opacity: .8;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.process-card {
+  padding: 28px;
+  border: 1px solid rgba(214,173,85,.25);
+  border-radius: 14px;
+  background: rgba(255,255,255,.025);
+  transition: transform .3s ease, border-color .3s ease;
+}
+
+.process-card:hover {
+  transform: translateY(-7px);
+  border-color: #d6ad55;
+}
+
+.process-card > span {
+  color: #d6ad55;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.process-card p {
+  line-height: 1.7;
+  opacity: .75;
+}
+
+/* PORTFOLIO CONCEPT CARDS */
+
+.portfolio-info {
+  padding: 23px;
+}
+
+.portfolio-info h3 {
+  margin: 10px 0;
+}
+
+.portfolio-info p {
+  line-height: 1.7;
+  opacity: .8;
+}
+
+.portfolio-art {
+  min-height: 230px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio-art strong {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  letter-spacing: 3px;
+}
+
+.portfolio-art span,
+.portfolio-art small {
+  letter-spacing: 2px;
+  font-size: .75rem;
+}
+
+.portfolio-art.beauty {
+  background: linear-gradient(135deg, #542e3a, #c08b83, #211319);
+  color: white;
+}
+
+.portfolio-art.interior {
+  background: linear-gradient(135deg, #8a765d, #d7c5a4, #30291f);
+  color: #17130f;
+}
+
+.portfolio-art.restaurant {
+  background: linear-gradient(135deg, #56251a, #c18b42, #1b100c);
+  color: white;
+}
+
+.portfolio-art.tech {
+  background: linear-gradient(135deg, #111b35, #315b83, #090d17);
+  color: white;
+}
+
+.portfolio-art.shop {
+  background: linear-gradient(135deg, #a17b3b, #ead8a9, #342716);
+  color: #17120a;
+}
+
+.portfolio-art.personal {
+  background: linear-gradient(135deg, #252525, #786044, #090909);
+  color: white;
+}
+
+/* PRICING */
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
+  gap: 25px;
+}
+
+.price-card {
+  position: relative;
+  padding: 35px 28px;
+  border: 1px solid rgba(214,173,85,.35);
+  border-radius: 18px;
+  background: rgba(255,255,255,.025);
+  display: flex;
+  flex-direction: column;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(0,0,0,.25);
+}
+
+.featured-price {
+  border: 2px solid #d6ad55;
+  background: linear-gradient(160deg, rgba(214,173,85,.13), rgba(255,255,255,.025));
+}
+
+.price-ribbon {
+  position: absolute;
+  top: -13px;
+  right: 20px;
+  padding: 7px 13px;
+  border-radius: 30px;
+  background: #d6ad55;
+  color: #111;
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.price-card h2 {
+  font-size: 1.7rem;
+  margin: 17px 0 5px;
+}
+
+.price-amount {
+  color: #d6ad55;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 15px 0;
+}
+
+.price-description {
+  line-height: 1.7;
+  opacity: .8;
+  min-height: 75px;
+}
+
+.price-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 30px;
+  flex: 1;
+}
+
+.price-card li {
+  padding: 11px 0;
+  border-bottom: 1px solid rgba(150,150,150,.15);
+  line-height: 1.5;
+}
+
+.price-card li::before {
+  content: "✓";
+  color: #d6ad55;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.price-card .btn {
+  text-align: center;
+}
+
+.extra-price-grid strong {
+  color: #d6ad55;
+  display: block;
+  margin-top: 15px;
+}
+
+/* CONTACT PAGE */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 55px;
+  align-items: start;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(150,150,150,.2);
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(214,173,85,.55);
+  border-radius: 50%;
+  color: #d6ad55;
+  font-size: 1.3rem;
+}
+
+.contact-method h3 {
+  margin: 0 0 5px;
+}
+
+.contact-method a {
+  color: inherit;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contact-method a:hover {
+  color: #d6ad55;
+}
+
+.contact-note {
+  margin-top: 30px;
+  padding: 22px;
+  border-left: 3px solid #d6ad55;
+  background: rgba(214,173,85,.07);
+}
+
+.contact-note p {
+  line-height: 1.7;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 35px;
+  border: 1px solid rgba(214,173,85,.35);
+  border-radius: 18px;
+  background: rgba(255,255,255,.025);
+}
+
+.contact-form h2 {
+  margin: 5px 0 15px;
+  font-size: 2rem;
+}
+
+.contact-form label {
+  margin-top: 9px;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid rgba(160,160,160,.35);
+  border-radius: 8px;
+  background: #151515;
+  color: #fff;
+  font: inherit;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: #d6ad55;
+  box-shadow: 0 0 0 3px rgba(214,173,85,.12);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.contact-form button {
+  margin-top: 15px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.form-note,
+.form-feedback {
+  font-size: .85rem;
+  line-height: 1.6;
+  opacity: .75;
+}
+
+.form-feedback {
+  color: #d6ad55;
+}
+
+/* LIGHT MODE SUPPORT */
+
+body.light-mode .page-hero {
+  background: #f5f1e8;
+}
+
+body.light-mode .about-highlight {
+  background: linear-gradient(135deg, #eee2c9, #fffaf0);
+  color: #181818;
+}
+
+body.light-mode .about-highlight-inner p {
+  color: #333;
+}
+
+body.light-mode .service-card,
+body.light-mode .process-card,
+body.light-mode .price-card,
+body.light-mode .contact-form {
+  background: rgba(0,0,0,.035);
+}
+
+body.light-mode .contact-form input,
+body.light-mode .contact-form select,
+body.light-mode .contact-form textarea {
+  background: #fff;
+  color: #171717;
+  border-color: #c9bda7;
+}
+
+body.light-mode .about-cta,
+body.light-mode .pricing-note {
+  background: rgba(214,173,85,.12);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 950px) {
+  .value-grid,
+  .extra-price-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .price-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .page-hero {
+    padding: 75px 6% 65px;
+  }
+
+  .about-story-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .value-grid,
+  .extra-price-grid,
+  .process-grid,
+  .price-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 23px 18px;
+  }
+
+  .about-highlight {
+    min-height: 290px;
+  }
+
+  .portfolio-art {
+    min-height: 190px;
+  }
+}
+
