@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | JesseWeb Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">✦ LET'S TALK ABOUT YOUR NEXT PROJECT ✦</div>
+
+  <header class="header">
+    <a href="index.html" class="logo">JESSE<span>WEB</span><small>CREATIVE DIGITAL STUDIO</small></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+    <nav id="mainNav">
+      <a href="index.html">Home</a><a href="about.html">About</a>
+      <a href="services.html">Services</a><a href="portfolio.html">Portfolio</a>
+      <a href="pricing.html">Pricing</a><a href="contact.html" class="active">Contact</a>
+      <a href="contact.html" class="nav-button">Hire Us ↗</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle" aria-label="Change colour theme">☼</button>
+  </header>
+
+  <main>
+    <section class="page-hero reveal">
+      <span class="eyebrow">LET'S CREATE SOMETHING GREAT</span>
+      <h1>Tell us about your <span class="gold-text">project.</span></h1>
+      <p>Have a website idea, need a redesign or want to discuss a business website? Send us a message.</p>
+    </section>
+
+    <section class="section contact-layout">
+      <div class="contact-info reveal">
+        <span class="eyebrow">GET IN TOUCH</span>
+        <h2>Let's make your <span class="gold-text">idea happen.</span></h2>
+        <p>Choose the contact method that works best for you. For project enquiries, you can also complete the form.</p>
+
+        <div class="contact-method">
+          <span class="contact-icon">☎</span>
+          <div><h3>WhatsApp</h3><a href="https://wa.me/2347034457988" target="_blank" rel="noopener">+234 703 445 7988</a></div>
+        </div>
+        <div class="contact-method">
+          <span class="contact-icon">✉</span>
+          <div><h3>Email</h3><a href="mailto:tamaranwaokolobia@gmail.com">tamaranwaokolobia@gmail.com</a></div>
+        </div>
+        <div class="contact-method">
+          <span class="contact-icon">◎</span>
+          <div><h3>Instagram</h3><a href="https://instagram.com/hangout-withjesse" target="_blank" rel="noopener">@hangout-withjesse</a></div>
+        </div>
+        <div class="contact-note"><strong>Let's build something memorable.</strong><p>Share your idea and we'll discuss the next steps.</p></div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm">
+        <span class="eyebrow">PROJECT ENQUIRY</span>
+        <h2>Start a conversation</h2>
+
+        <label for="clientName">Your name</label>
+        <input type="text" id="clientName" name="name" placeholder="Enter your name" required>
+
+        <label for="clientEmail">Email address</label>
+        <input type="email" id="clientEmail" name="email" placeholder="you@example.com" required>
+
+        <label for="projectType">What do you need?</label>
+        <select id="projectType" name="project" required>
+          <option value="">Choose a service</option>
+          <option>Business website</option>
+          <option>Personal portfolio</option>
+          <option>Landing page</option>
+          <option>Website redesign</option>
+          <option>Website updates</option>
+          <option>Other project</option>
+        </select>
+
+        <label for="projectBudget">Estimated budget</label>
+        <select id="projectBudget" name="budget">
+          <option value="">Choose a budget range (optional)</option>
+          <option>Below ₦100,000</option>
+          <option>₦100,000 – ₦250,000</option>
+          <option>₦250,000 – ₦500,000</option>
+          <option>Above ₦500,000</option>
+          <option>Not sure yet</option>
+        </select>
+
+        <label for="projectMessage">Tell us about your project</label>
+        <textarea id="projectMessage" name="message" rows="5" placeholder="What kind of website do you want? What pages or features do you need?" required></textarea>
+
+        <button type="submit" class="btn gold-btn">Send enquiry on WhatsApp ↗</button>
+        <p class="form-note">Your message will open in WhatsApp for you to review and send.</p>
+        <p id="formFeedback" class="form-feedback" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid section">
+      <div><a href="index.html" class="logo">JESSE<span>WEB</span><small>CREATIVE DIGITAL STUDIO</small></a><p>Creative websites for ambitious brands.</p></div>
+      <div><h3>Explore</h3><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="pricing.html">Pricing</a></div>
+      <div><h3>Contact</h3><a href="mailto:tamaranwaokolobia@gmail.com">Email us</a><a href="https://instagram.com/hangout-withjesse" target="_blank" rel="noopener">Instagram</a><a href="https://wa.me/2347034457988" target="_blank" rel="noopener">WhatsApp</a></div>
+    </div>
+    <div class="footer-bottom">© <span id="year"></span> JesseWeb Studio. All rights reserved.</div>
+  </footer>
+  <a class="whatsapp-button" href="https://wa.me/2347034457988?text=Hello%20JesseWeb%20Studio" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">☎</a>
+</body>
+</html>
