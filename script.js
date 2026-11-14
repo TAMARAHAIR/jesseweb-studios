@@ -116,6 +116,65 @@ document.addEventListener("DOMContentLoaded", function () {
             element.classList.add("visible");
         });
 
+
+        
+/* =========================================
+   JESSEWEB STUDIO - CONTACT FORM
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const contactForm = document.getElementById("contactForm");
+
+  if (!contactForm) return;
+
+  // Read a selected package from the pricing page.
+  const params = new URLSearchParams(window.location.search);
+  const selectedPackage = params.get("package");
+
+  const projectSelect = document.getElementById("projectType");
+
+  if (selectedPackage && projectSelect) {
+    const packageOption = document.createElement("option");
+    packageOption.value = selectedPackage;
+    packageOption.textContent = selectedPackage;
+    packageOption.selected = true;
+    projectSelect.appendChild(packageOption);
+  }
+
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("clientName").value.trim();
+    const email = document.getElementById("clientEmail").value.trim();
+    const project = document.getElementById("projectType").value;
+    const budget = document.getElementById("projectBudget").value;
+    const message = document.getElementById("projectMessage").value.trim();
+    const feedback = document.getElementById("formFeedback");
+
+    if (!name || !email || !project || !message) {
+      feedback.textContent = "Please complete all required fields.";
+      return;
+    }
+
+    const whatsappMessage =
+      "Hello JesseWeb Studio!%0A%0A" +
+      "*NEW PROJECT ENQUIRY*%0A%0A" +
+      "*Name:* " + encodeURIComponent(name) + "%0A" +
+      "*Email:* " + encodeURIComponent(email) + "%0A" +
+      "*Service:* " + encodeURIComponent(project) + "%0A" +
+      "*Budget:* " + encodeURIComponent(budget || "Not specified") + "%0A" +
+      "*Project details:* " + encodeURIComponent(message);
+
+    const whatsappURL =
+      "https://wa.me/2347034457988?text=" + whatsappMessage;
+
+    feedback.textContent = "Opening WhatsApp. Review your message and press Send.";
+
+    window.open(whatsappURL, "_blank", "noopener,noreferrer");
+  });
+});
+
+
     }
 
 });
