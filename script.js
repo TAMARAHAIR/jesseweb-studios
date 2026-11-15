@@ -243,3 +243,69 @@ const yearElement = document.querySelector("#current-year");
 if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
 }
+
+
+// ======================================
+// JESSEWEB STUDIO - ECOMMERCE INTERACTIONS
+// ======================================
+
+// Animate pricing cards when they enter the screen
+const ecommerceCards = document.querySelectorAll(".ecommerce-card");
+
+if ("IntersectionObserver" in window) {
+    const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("card-visible");
+                cardObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    ecommerceCards.forEach((card) => {
+        card.classList.add("card-hidden");
+        cardObserver.observe(card);
+    });
+} else {
+    ecommerceCards.forEach((card) => {
+        card.classList.add("card-visible");
+    });
+}
+
+
+// Package selection interaction
+const packageButtons = document.querySelectorAll(".package-button");
+
+packageButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+        const packageName = this.closest(".ecommerce-card")
+            ?.querySelector("h3")?.textContent;
+
+        if (packageName) {
+            console.log("Selected package:", packageName);
+        }
+    });
+});
+
+
+// Pricing card hover effect for pointer devices
+ecommerceCards.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+        card.classList.add("card-active");
+    });
+
+    card.addEventListener("mouseleave", () => {
+        card.classList.remove("card-active");
+    });
+});
+
+
+// Current year for website footer
+const yearElement = document.querySelector("#current-year");
+
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+}
+
